@@ -1,0 +1,26 @@
+###
+GET http://localhost:3000/product HTTP/1.1
+
+
+###
+POST http://localhost:3000/product HTTP/1.1
+Content-Type: application/json
+
+{
+    "sku": "100",
+    "name": "Hat",
+    "note": "Hat",
+    "price": 100
+}
+
+
+###
+POST http://localhost:3000/product HTTP/1.1
+Content-Type: application/json
+
+{
+    "sku": "101",
+    "name": "Cap",
+    "note": "Cap",
+    "price": 99
+}
