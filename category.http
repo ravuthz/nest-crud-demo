@@ -1,0 +1,33 @@
+###
+GET http://localhost:3000/category HTTP/1.1
+
+
+###
+POST http://localhost:3000/category HTTP/1.1
+Content-Type: application/json
+
+{
+    "parent_id": 0,
+    "name": "Clothes",
+    "note": "Clothes category"
+}
+
+###
+POST http://localhost:3000/category HTTP/1.1
+Content-Type: application/json
+
+{
+    "parent_id": 1,
+    "name": "Male Clothes",
+    "note": "Male Clothes category"
+}
+
+###
+POST http://localhost:3000/category HTTP/1.1
+Content-Type: application/json
+
+{
+    "parent_id": 1,
+    "name": "Female Clothes",
+    "note": "Female Clothes category"
+}
