@@ -5,28 +5,28 @@ import { Category } from './category.entity';
 
 @Injectable()
 export class CategoryService {
-    constructor(
-        @InjectRepository(Category)
-        private repository: Repository<Category>,
-    ) {}
+  constructor(
+    @InjectRepository(Category)
+    private repository: Repository<Category>,
+  ) {}
 
-    async findById(id): Promise<Category> {
-        return this.repository.findOne(id);
-    }
-    
-    async  findAll(): Promise<Category[]> {
-        return await this.repository.find();
-    }
+  async findById(id): Promise<Category> {
+    return this.repository.findOne(id);
+  }
 
-    async  create(data: Category): Promise<Category> {
-        return await this.repository.save(data);
-    }
+  async findAll(): Promise<Category[]> {
+    return await this.repository.find();
+  }
 
-    async update(data: Category): Promise<UpdateResult> {
-        return await this.repository.update(data.id, data);
-    }
+  async create(data: Category): Promise<Category> {
+    return await this.repository.save(data);
+  }
 
-    async delete(id): Promise<DeleteResult> {
-        return await this.repository.delete(id);
-    }
+  async update(data: Category): Promise<UpdateResult> {
+    return await this.repository.update(data.id, data);
+  }
+
+  async delete(id): Promise<DeleteResult> {
+    return await this.repository.delete(id);
+  }
 }
